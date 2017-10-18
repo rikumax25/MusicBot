@@ -720,7 +720,7 @@ class MusicBot(discord.Client):
         print()
         # t-t-th-th-that's all folks!
 
-    async def cmd_help(self, command=None):
+    async def cmd_akkohelp(self, command=None):
         """
         Usage:
             {command_prefix}help [command]
@@ -748,7 +748,7 @@ class MusicBot(discord.Client):
             commands = []
 
             for att in dir(self):
-                if att.startswith('cmd_') and att != 'cmd_help':
+                if att.startswith('cmd_') and att != 'cmd_akkohelp':
                     command_name = att.replace('cmd_', '').lower()
                     commands.append("{}{}".format(self.config.command_prefix, command_name))
 
